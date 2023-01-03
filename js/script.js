@@ -1,0 +1,71 @@
+var mapbutton = document.querySelector(".map__button")
+var popup = document.querySelector(".popup")
+var close = document.querySelector(".close")
+
+mapbutton.addEventListener("click", function() {
+    popup.classList.add("popup__second")
+}); 
+
+close.addEventListener("click", function(){
+    popup.classList.remove("popup__second")
+});
+
+var slide = document.querySelector(".slide")
+var body = document.querySelector(".body")
+var icecream1 = document.querySelector(".mainphotobig")
+var icecream2 = document.querySelector(".mainphotosmall")
+var slide1 = document.querySelector(".slidegreen")
+var slide2 = document.querySelector(".slidegray")
+var slide3 = document.querySelector(".slidebrown")
+var pomadka = document.querySelector(".mainphotopomadka")
+var sherbet = document.querySelector(".sherbet")
+
+var mainSloganText1 = document.querySelector(".mainSlogan__text-brule")
+var mainSloganText2 =document.querySelector(".mainSlogan__text-choco")
+var mainSloganText3 = document.querySelector(".mainSlogan__text-pomadka")
+var mainSloganTextRe = document.querySelector(".mainSlogan__text-remove")
+
+slide.addEventListener("click", function(){
+    body.classList.add("body__second")
+    body.classList.remove("body__third")
+    icecream1.classList.add("mainphotochoco")
+    icecream2.classList.add("mainphotolimon")
+    slide1.classList.remove("slidegreen")
+    slide2.classList.add("slidegreen")
+    slide3.classList.remove("slidegreen")
+    icecream1.classList.remove("mainphotopomadka")
+    icecream2.classList.remove("sherbet")
+    mainSloganText1.classList.add("mainSlogan__text-remove")
+    mainSloganText2.classList.add("mainSlogan__text-brule")
+    mainSloganTextRe.classList.remove("mainSlogan__text-remove")
+    mainSloganText3.classList.add("mainSlogan__text-remove")
+});
+slide1.addEventListener("click", function(){
+    slide1.classList.add("slidegreen")
+    slide2.classList.remove("slidegreen")
+    body.classList.remove("body__second")
+    body.classList.remove("body__third")
+    icecream1.classList.remove("mainphotochoco")
+    icecream2.classList.remove("mainphotolimon")
+    slide3.classList.remove("slidegreen")
+    icecream1.classList.remove("mainphotopomadka")
+    icecream2.classList.remove("sherbet")
+    mainSloganText2.classList.remove("mainSlogan__text-brule")
+    mainSloganText2.classList.add("mainSlogan__text-remove")
+    mainSloganText1.classList.add("mainSlogan__text-brule")
+    mainSloganText1.classList.remove("mainSlogan__text-remove")
+    mainSloganText3.classList.add("mainSlogan__text-remove")
+})
+slide3.addEventListener("click", function(){
+    body.classList.add("body__third")
+    slide3.classList.add("slidegreen")
+    slide2.classList.remove("slidegreen")
+    icecream1.classList.add("mainphotopomadka")
+    icecream2.classList.add("sherbet")
+    slide1.classList.remove("slidegreen")
+    mainSloganText2.classList.remove("mainSlogan__text-brule")
+    mainSloganText2.classList.add("mainSlogan__text-remove")
+    mainSloganText3.classList.add("mainSlogan__text-brule")
+    mainSloganText3.classList.remove("mainSlogan__text-remove")
+    mainSloganText1.classList.add("mainSlogan__text-remove")
+})
